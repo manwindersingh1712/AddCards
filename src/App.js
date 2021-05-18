@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import AddLink from "./Components/AddLink";
+import Card from "./Components/cards";
+import uuid from "react-uuid";
 
 function App() {
+  const [data, setData] = useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddLink data={data} setData={setData} />
+      {data.length > 0 && (
+        <div className="cards_container">
+          {data.map((link) => {
+            return <Card link={link} key={uuid()} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }

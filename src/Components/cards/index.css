@@ -1,0 +1,18 @@
+.card_container {
+  width: 200px;
+  height: 300px;
+  border: 3px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card_container button {
+  margin-left: 10px;
+}
+
+@media (max-width: 980px) {
+  .card_container {
+    margin: auto;
+  }
+}

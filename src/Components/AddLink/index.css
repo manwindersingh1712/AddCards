@@ -1,0 +1,52 @@
+.addLink_container {
+  margin: 50px;
+}
+
+.addLink_container input {
+  border: 3px solid gray;
+  width: 200px;
+  height: 20px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.addLink_container button {
+  width: 100px;
+  height: 46px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+
+.addLink_container button:focus {
+  outline-width: 0;
+}
+
+.addLink_container button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .addLink_container form {
+    width: max-content;
+  }
+  .addLink_container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .addLink_container form {
+    display: grid;
+  }
+  .addLink_container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-top: 20px;
+  }
+}
